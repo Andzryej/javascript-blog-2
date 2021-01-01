@@ -27,20 +27,17 @@
   for(let activeArticle of activeArticles){
     activeArticle.classList.remove('active');
   }
-  /* get 'href' attribute from the clicked link */
+
+  /* get 'href' attribute from the clicked link ZAPYTAC MENTORA O CO TU CHODZI
+   */
   let articleSelector = clickedElement.getAttribute("href");
   console.log( articleSelector);
 
   /* find the correct article using the selector (value of 'href' attribute) */
-const targetArticle = document.querySelector("article");
-targetArticle.getAttribute("id");
-console.log(targetArticle)
+let targetArticle=document.querySelector(articleSelector);
   /* add class 'active' to the correct article */
-targetArticle.classList.add("active");
-
-
-
-}
+  targetArticle.classList.add("active");
+  }
   const links = document.querySelectorAll('.titles a');
   
   for(let link of links){
